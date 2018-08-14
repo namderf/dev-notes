@@ -1,8 +1,8 @@
-#Ruby compact
+# Ruby compact
 + number, string, boolean with implicit typing *(e.g. my_num=25)*
 + no semicolon
 
-##Comments
+## Comments
 One line:
 
     #This is a comment
@@ -14,23 +14,23 @@ Multi Line:
     a comment
     =end
 
-##Output
+## Output
 + `puts` Output to console with CR
 + `print` Output to console without CR
 + `"This is a string with a #{variable} in it."`
 
-##Input
+## Input
 + `gets` input with CR
 + `gets.chomp` input without CR
 
-##Assignment
+## Assignment
 + `a=b` simple assignment
 + `a+=b` corresponds `a=a+b` 
 + `a-=b` corresponds `a=a-b` 
 + `a*=b` corresponds `a=a*b` 
 + `a/=b` corresponds `a=a/b` 
 
-##String methods
+## String methods
 + `my_string.length` length of my_string
 + `my_string.reverse` reverse my_string
 + `my_string.upcase` my_string to uppercase
@@ -40,7 +40,7 @@ Multi Line:
 + `my_string.split("split_string")` splits my_string based on split_string. returns array
 + apply method result to invoke string via `!` after method name (e.g. `my_string.downcase!`)
 
-##Control flow
+## Control flow
 + `if [expr] - elsif - else - end`
 + `unless [expr] - else - end`
 + `while [expr] do - end`
@@ -50,19 +50,19 @@ Multi Line:
 + `loop do - next if [expr] - break if [expr] - end`
 + `x.times {[code]}` repeat [code] x times
 
-##Comparison operators
+## Comparison operators
 `==` `!=` `<` `<=` `>` `>=`
 
-##Boolean operators
+## Boolean operators
 `&&` `||` `!`
 
-##Arrays
+## Arrays
 + `my_array=[1,2,3,4,5]`
 + `my_array.each do |x| - end`
 + `my_array.each  {|x| [code]}`
 + access by index `my_aray[x]`
 
-##Hash
+## Hash
 + `my_hash = { key1=>value1, key2=>value2,key3=>value3}`
 + `my_hash= Hash.new` (empty hash)
 + `my_hash[key]=value` add/update key/value
