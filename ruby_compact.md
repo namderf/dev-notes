@@ -1,7 +1,8 @@
 # Ruby compact
 + number, string, boolean with implicit typing (e.g. `my_num=25`)
 + 'nil' null value
-+ no semicolon
++ no semicolons needed
+    + however can be used for simple oneliners like empty classes (e.g. `class MyClass; end`)
 
 ## Comments
 One line:
@@ -223,6 +224,86 @@ call method with parameter and block
 
     method(param) {|n| [block code]}
 
+## Classes
+
+    class NewClass
+      def initialize (param1, param2)
+        @param1 = param1
+        @param2 = param2
+      end
+    end
+
+`initialize` method defines constructor. `@variable` defines an instance variable.
+
+Creating object from class with `My_Class.new(param)`.
+
+**Inheritance:**
+
+    class MyClass < SuperClass
+      def my_method (param)
+        #Some code
+        super(param) #calls my_method in SuperClass
+      end
+    end
+
+**Class Methods**
+
+    class MyClass
+      def MyClass.class_method
+        #some class method code
+      end
+    end
+
+## Getter/Setter
+
+With Get/Set methods:
+
+    class MyClass
+      def initialize (name)
+        @name=name
+      end
+
+      def name
+        @name
+      end
+
+      # The = in method name declares a set method (Ruby Convention)
+	  def name=(value)
+        @name = value
+      end
+    end
+
+With attr_reader/attr_writer/attr_accessor:
+
+	class MyClass
+	  attr_reader :name
+	  attr_writer :name
+	  attr_accessor :town
+
+	  def initialize (name, town)
+	    @name=name
+	    @town=town
+	  end
+	end
+
+attr_accessor combines attr_reader and attr_writer in one declaration.
+
+## Variable scopes
+
++ `@my_variable` instance variable (approx. this.my_variable)
++ `@@my_variable` class variable (approx. static my_variable)
++ `$my_variable` global variable used inside a method or class
+
+## Access modifiers
+
++ `public`
++ `private`
+
+Can be declared in its own line. Everything after that declaration is public/private till `end`.
+
 ## Respond to
 
 `object.respond_to?(:symbol)` returns true if object can receive method (e.g. `[1,2,3].respond_to?(:push)`).
+
+## Time methods
++ `Time.now` returns actual time
