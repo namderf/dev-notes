@@ -301,6 +301,26 @@ attr_accessor combines attr_reader and attr_writer in one declaration.
 
 Can be declared in its own line. Everything after that declaration is public/private till `end`.
 
+## Modules
+
+Stores constants and methods. Can't be instantiated.
+
+    module MyModule
+      #some code
+    end
+
+**access:**
+
+    require 'MyModule'
+    MyModule::my_method
+
+or
+    
+    include MyModule
+    my_Method
+
+
+
 ## Respond to
 
 `object.respond_to?(:symbol)` returns true if object can receive method (e.g. `[1,2,3].respond_to?(:push)`).
