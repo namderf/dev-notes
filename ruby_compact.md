@@ -319,8 +319,6 @@ or
     include MyModule
     my_Method
 
-
-
 ## Respond to
 
 `object.respond_to?(:symbol)` returns true if object can receive method (e.g. `[1,2,3].respond_to?(:push)`).
