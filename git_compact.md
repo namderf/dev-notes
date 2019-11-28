@@ -16,6 +16,7 @@
 	git branch -d -r origin/%OLD_BRANCHNAME%
 	git push origin :%OLD_BRANCHNAME%
 
+	
 ## CSV of all remote branches with last commit date
 
 	git branch -r --format="%%(refname:short);%%(authordate:short)" > "lastcommits.csv"
